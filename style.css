@@ -1,4 +1,4 @@
-        :root {
+ :root {
             --primary: #7eb9d6;
             --primary-dark: #0088cc;
             --secondary: #ff6b6b;
@@ -75,14 +75,14 @@
         }
 
         .links a {
-            color: var(--primary);
+            color: var(--light);
             text-decoration: none;
             display: inline-block;
             margin: 10px 15px 10px 0;
             padding: 8px 15px;
-            border: 1px solid var(--primary);
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            border-bottom: 2px solid var(--primary);
+            transition: all 0.2s ease;
+            
         }
 
         .links a:hover {
