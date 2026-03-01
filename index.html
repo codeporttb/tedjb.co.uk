@@ -34,6 +34,52 @@
     }
     
     setInterval(updateTimer, 1000);
+
+     document.addEventListener("DOMContentLoaded", () => {
+const body = document.querySelector('body');
+const textNodes = [];
+const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, null, false);
+let node;
+
+while (node = walker.nextNode()) {
+    const parent = node.parentElement;
+    if (parent.tagName !== 'SCRIPT' && parent.tagName !== 'STYLE' && node.nodeValue.trim() !== '') {
+        textNodes.push({
+            node: node,
+            text: node.nodeValue,
+            container: parent.closest('.section') || parent.closest('header') || parent.closest('footer') || parent.closest('.links')
+        });
+        node.nodeValue = ''; 
+    }
+}
+
+let i = 0;
+function type() {
+    if (i < textNodes.length) {
+        let item = textNodes[i];
+        
+        if (item.container) {
+            item.container.style.opacity = "1";
+        }
+
+        let charIndex = 0;
+        const chunkSize = 3;// <--chunksize
+
+        function typeChunk() {
+            if (charIndex < item.text.length) {
+                item.node.nodeValue += item.text.substring(charIndex, charIndex + chunkSize);
+                charIndex += chunkSize;
+                setTimeout(typeChunk, 1); 
+            } else {
+                i++;
+                type(); 
+            }
+        }
+        typeChunk();
+    }
+}
+type();
+});
     </script>
     
 <body>
