@@ -27,13 +27,14 @@
         }
 
         header {
-            font-family: 'Montserrat';
-            padding: 50px 50px 50px;
-            text-align: left;
-            margin-top: 3px;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 1px solid var(--primary);
+           padding: 50px 50px 50px;
+           text-align: left;
+           margin-top: 3px;
+           position: relative;
+           overflow: hidden;
+           border-bottom: 1px solid var(--primary);
+           opacity: 0; 
+            
         }
 
         header h1 {
