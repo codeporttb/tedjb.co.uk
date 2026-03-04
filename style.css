@@ -1,120 +1,87 @@
- :root {
-            --primary: #7eb9d6;
-            --primary-dark: #0088cc;
-            --secondary: #ff6b6b;
-            --dark: #161616;
-            --darker: #111111;
-            --light: #ffffff;
-            --gray: #a79f9f;
-            --dark-gray: #20202033;
-            --border: #353535;
-        }
-        
-        body {
-            line-height: 1.6;
-            font-family: 'Inter', sans-serif;
-            background-color: var(--darker );
-            color: var(--light);
-            max-width: 900px; margin: 0 auto;
-            
+:root {
+    --primary: #7eb9d6;
+    --primary-dark: #0088cc;
+    --secondary: #ff6b6b;
+    --dark: #161616;
+    --darker: #111111;
+    --light: #ffffff;
+    --gray: #a79f9f;
+    --dark-gray: #20202033;
+    --border: #353535;
+}
 
-        }
+body {
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--darker );
+    color: var(--light);
+    max-width: 900px; margin: 0 auto;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding:  20px;
-        }
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding:  20px;
+}
 
-        header {
-           padding: 50px 50px 50px;
-           text-align: left;
-           margin-top: 3px;
-           position: relative;
-           overflow: hidden;
-           border-bottom: 1px solid var(--primary);
-           opacity: 0; 
-            
-        }
+header {
+    padding: 50px 50px 50px;
+    text-align: left;
+    margin-top: 3px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--primary);
+    opacity: 0; 
+}
 
-        header h1 {
-            font-size: 3rem;
-            margin: 1px;
-            color: var(--primary);
-            letter-spacing: 2px;
-        }
+header h1 {
+    font-size: 3rem;
+    margin: 1px;
+    color: var(--primary);
+    letter-spacing: 2px;
+}
 
-        header h2 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-top: 10px;
-            letter-spacing: 1px;
-        }
+.section {
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0;
+    border: 2px solid var(--primary);
+    opacity: 0;
+}
 
-        .section {
-            border-radius: 8px;
-            padding: 30px;
-            margin: 30px 0;
-            border: 2px solid var(--primary);
-            
-        }
+ h2 {
+    color: var(--primary);
+    font-size: 25px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    font-style: italic
+}
 
-         h2 {
-            font-family: 'Inter', sans-serif;
-            color: var(--primary);
-            font-size: 25px;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-            font-style: italic
-        }
+.links a {
+    color: var(--light);
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 15px 10px 0;
+    padding: 8px 15px;
+    border-bottom: 2px solid var(--primary);
+    transition: all 0.2s ease;
+}
 
-        h3 {
-            font-family: 'Inter', sans-serif;
-            color: var(--light);
-            font-size: 17px;
-            margin: 20px 0 10px;
-        }
+.links a:hover {
+    background-color: var(--primary);
+    color: var(--dark);
+}
 
-        .links a {
-            color: var(--light);
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px 15px 10px 0;
-            padding: 8px 15px;
-            border-bottom: 2px solid var(--primary);
-            transition: all 0.2s ease;
-            
-        }
+a {
+    color:var(--primary)
+}
 
-        .links a:hover {
-            background-color: var(--primary);
-            color: var(--dark);
-        }
-
-        a {
-
-            color: var(--light)
-
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            background-color: 1xp var(--dark);
-            border-top: 1px solid var(--primary);
-            color: (var(--light));
-            font-size: 17px;
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: rgba(0, 170, 255, 0.2);
-            color: var(--primary);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 8px;
-            margin-bottom: 8px;
-        }
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid var(--primary);
+    font-size: 17px;
+    opacity: 0;
+}
